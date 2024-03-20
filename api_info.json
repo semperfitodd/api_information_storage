@@ -1,0 +1,47 @@
+{
+  "Custody Activity Monitoring": {
+    "API_description": "Create operational efficiencies with higher frequency access to data intraday. Monitor cash entries and trade activity in near real time throughout the day.",
+    "API_version": "v3",
+    "API_Provider_APM_number": "APM0003226",
+    "API_Consumers_APM_numbers": [
+      "APM0003222",
+      "APM0003223",
+      "APM0003224"
+    ],
+    "Lifecycle_State": "In Production",
+    "Environment": "Production",
+    "Visibility": "Public",
+    "Intended_Consumers": "External",
+    "API_Design": "REST",
+    "Request_data_format": "JSON",
+    "Response_data_format": [
+      "JSON",
+      "XML"
+    ],
+    "API_Owner_LAN_ID": "Li909",
+    "Backend_URL": "https://domain.com/custody/v3/activity",
+    "Frontend_URL": "https://api.northerntrust.com/custody/v3/activity",
+    "API_Operations": [
+      "GET list activity",
+      "POST create activity",
+      "PUT modify activity"
+    ],
+    "Dependency_APIs_or_Services": [
+      "APM0004000",
+      "APM0005000",
+      "APM0006000"
+    ],
+    "API_Gateway_Location": "On-prem",
+    "API_Gateway_instance_info": "APIM-uxp-ea-cus-d-apim Gateway-Managed",
+    "API_Security": {
+      "Authentication": "MS Entra ID",
+      "Authorization": "OKTA",
+      "Encryption": [
+        "mTLS",
+        "TLS 1.1",
+        "TLS 1.2",
+        "TLS 1.3"
+      ]
+    }
+  }
+}
