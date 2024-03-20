@@ -1,14 +1,14 @@
 {
   "Custody Activity Monitoring": {
-    "API_description": "Create operational efficiencies with higher frequency access to data intraday. Monitor cash entries and trade activity in near real time throughout the day.",
-    "API_version": "v3",
-    "API_Provider_APM_number": "APM0003226",
+    "API_description": "Enhance operational efficiencies with frequent access to data. Monitor financial transactions and account activity with real-time updates.",
+    "API_version": "vX",
+    "API_Provider_APM_number": "APMXXXXXX",
     "API_Consumers_APM_numbers": [
-      "APM0003222",
-      "APM0003223",
-      "APM0003224"
+      "APMXXXXX1",
+      "APMXXXXX2",
+      "APMXXXXX3"
     ],
-    "Lifecycle_State": "In Production",
+    "Lifecycle_State": "Production",
     "Environment": "Production",
     "Visibility": "Public",
     "Intended_Consumers": "External",
@@ -18,29 +18,27 @@
       "JSON",
       "XML"
     ],
-    "API_Owner_LAN_ID": "Li909",
-    "Backend_URL": "https://domain.com/custody/v3/activity",
-    "Frontend_URL": "https://api.northerntrust.com/custody/v3/activity",
+    "API_Owner_LAN_ID": "OwnerIDXXX",
+    "Backend_URL": "https://genericdomain.com/api/version/activity",
+    "Frontend_URL": "https://apigateway.domain.com/api/version/activity",
     "API_Operations": [
-      "GET list activity",
-      "POST create activity",
-      "PUT modify activity"
+      "GET retrieve activity",
+      "POST add activity",
+      "PUT update activity"
     ],
     "Dependency_APIs_or_Services": [
-      "APM0004000",
-      "APM0005000",
-      "APM0006000"
+      "APMXXXX100",
+      "APMXXXX200",
+      "APMXXXX300"
     ],
-    "API_Gateway_Location": "On-prem",
-    "API_Gateway_instance_info": "APIM-uxp-ea-cus-d-apim Gateway-Managed",
+    "API_Gateway_Location": "Location",
+    "API_Gateway_instance_info": "API Gateway Instance Details",
     "API_Security": {
-      "Authentication": "MS Entra ID",
-      "Authorization": "OKTA",
+      "Authentication": "Authentication Method",
+      "Authorization": "Authorization Method",
       "Encryption": [
-        "mTLS",
-        "TLS 1.1",
-        "TLS 1.2",
-        "TLS 1.3"
+        "Encryption Method 1",
+        "Encryption Method 2"
       ]
     }
   }
