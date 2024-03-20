@@ -35,6 +35,7 @@ The repository is structured as follows:
     terraform apply plan.out
     ```
     You'll be prompted to review the proposed changes. Type yes to proceed with the deployment of the DynamoDB table.
+   
    ![tf.png](images%2Ftf.png)
 ### Docker Build
 1. **Build the Docker Image**
@@ -45,6 +46,7 @@ The repository is structured as follows:
     docker build -t api_information_storage .
     ```
     This command creates a Docker image named api_information_storage, containing the Python application and its dependencies.
+
    ![docker_build.png](images%2Fdocker_build.png)
 ### Running the Container
 1. **Run the Docker Container**
@@ -55,6 +57,7 @@ The repository is structured as follows:
     docker run -v <LOCAL_AWS_CREDENTIALS_LOCATION>.aws:/root/.aws:ro -e AWS_PROFILE=<LOCAL_AWS_PROFILE> api_information_storage
     ``` 
    This command does a few important things:
+
     ![docker_run.jpg](images%2Fdocker_run.jpg)
    * `-v <LOCAL_AWS_CREDENTIALS_LOCATION>/.aws:/root/.aws:ro` mounts your AWS credentials from your host machine into the container. This is necessary for the application to access AWS services using your credentials.
    * `-e AWS_PROFILE=<LOCAL_AWS_PROFILE>` sets the environment variable AWS_PROFILE inside the container. This specifies which AWS profile to use for authentication, allowing the script to use the correct credentials.
