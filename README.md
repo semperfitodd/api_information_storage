@@ -47,7 +47,7 @@ The repository is structured as follows:
     ```
     This command creates a Docker image named api_information_storage, containing the Python application and its dependencies.
 
-   ![docker_build.jpg](images%2Fdocker_build.jpg)
+   ![docker_build.png](images%2Fdocker_build.png)
 ### Running the Container
 1. **Run the Docker Container**
 
@@ -63,7 +63,7 @@ The repository is structured as follows:
    * `-e AWS_PROFILE=<LOCAL_AWS_PROFILE>` sets the environment variable AWS_PROFILE inside the container. This specifies which AWS profile to use for authentication, allowing the script to use the correct credentials.
    * `api_information_storage` is the name of the Docker image to run.
 
-![stored_info.jpg](images%2Fstored_info.jpg)
+![stored_info.png](images%2Fstored_info.png)
 ### Why Declare and Mount
 * **Declaring Environment Variables:** Environment variables like TABLE_NAME and AWS_PROFILE are declared to customize the container's behavior without hardcoding sensitive information or configuration details into the Docker image. This approach enhances security and flexibility.
 * **Mounting AWS Credentials:** Mounting the .aws directory as a read-only volume ensures that the container can authenticate with AWS services using your credentials without including them in the Docker image. This method keeps your credentials secure while allowing the application to interact with AWS resources.
